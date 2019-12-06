@@ -1,0 +1,27 @@
+stages:
+  - build
+
+## build stage.
+build:
+  stage: build
+  only:
+    - master
+  tags:
+    - dev
+  script:
+    - PROJ="synimage"
+    - git config --global user.name "Anatoly Politsin"
+    - git config --global user.email politsin@gmail.com
+    - git config --global push.default simple
+    - git checkout master
+    - git pull
+    - git checkout 8.x-1.x
+    - git branch --set-upstream-to=origin/8.x-1.x 8.x-1.x
+    - git pull
+    - git merge master
+    - git remote set-url origin https://$AUTH@git.synapse-studio.ru/d-org/$PROJ.git
+    - git push origin 8.x-1.x
+    - git remote set-url origin $DAUTH@git.drupal.org:project/$PROJ.git
+    - git push
+    - git tag
+    - git push --tags

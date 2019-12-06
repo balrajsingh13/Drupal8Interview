@@ -1,0 +1,35 @@
+<?php 
+/** 
+* Implements hook_theme(). 
+*/ 
+// function page1base_theme() 
+// { 
+//    $templates = array('contacts_show_page' => array('template' =>'contacts_show'),
+// 		      'contact_edit_page'  => array('variables' => ['id' => NULL],'template' => 'contact_edit')
+// 		      );
+//   return $templates;
+									
+// }
+
+function mymodule_theme($existing, $type, $theme, $path) 
+{ 
+  return [
+    'contacts_show' => [
+      'variables' => ['user_role' => NULL],
+    ],
+  ];
+									
+}
+
+// Functionality of next prev.
+
+// function mymodule_views_pre_render(\Drupal\views\ViewExecutable $view) {
+//   if ($view->id() == "next_prev" && $view->current_display == 'block_1') {
+    
+//   }
+// }
+
+// foreach($view->result as $value){
+//       kint($value->_entity->get('title')->value);
+//       $value->_entity->set('title', 'test - ' . time());
+//     }

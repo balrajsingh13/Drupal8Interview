@@ -1,0 +1,14 @@
+name: Amazon Web Services
+type: module
+description: AWS
+package: Amazon Web Services
+# core: 8.x
+dependencies:
+  - encrypt
+  - real_aes
+
+# Information added by Drupal.org packaging script on 2018-07-11
+version: '8.x-1.0-beta2'
+core: '8.x'
+project: 'aws'
+datestamp: 1531342768

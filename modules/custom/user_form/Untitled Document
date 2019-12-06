@@ -1,0 +1,10 @@
+dlp_commonjs:
+  version: 1.x
+  js:
+      js/dlp_common.js: {}
+  
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal.ajax

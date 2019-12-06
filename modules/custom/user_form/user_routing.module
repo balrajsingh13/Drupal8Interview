@@ -1,0 +1,10 @@
+<?php
+function user_routing_theme($existing, $type, $theme, $path) 
+{ 
+  return [
+    'show_user_entries' => [
+      'variables' => ['data_row' => NULL],
+    ],
+  ];
+									
+}

@@ -1,0 +1,66 @@
+<?php
+/**
+* Implements hook_schema().
+*
+* Defines the database tables used by this module to store user's f.name, l.name, email and phone-number.
+*
+* @see hook_schema()
+*
+* @ingroup lotus
+*/
+function user_form_schema() {
+  $schema['user_entries'] = array(
+    'description' => 'Stores user-entries.',
+    'fields' => array(
+      'pid' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique person ID.',
+      ),
+      'uid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => "Creator user's {users}.uid",
+      ),
+      'first_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'First Name of the person.',
+      ),
+      'last_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Last Name of the person.',
+      ),
+      'email' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Email of the person.',
+      ),
+      'phone_number' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'length' => 10,
+        'size' => 'big',
+        'description' => 'Phone number of the person.',
+      ),
+    ),
+    'primary key' => array('pid'),
+    'indexes' => array(
+      'first_name' => array('first_name'),
+      'last_name' => array('last_name'),
+      'email' => array('email'),
+      'phone_number' => array('phone_number'),
+    ),
+  );
+
+  return $schema;
+}

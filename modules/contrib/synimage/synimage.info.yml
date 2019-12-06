@@ -1,0 +1,12 @@
+name: Synapse Image Formatter
+description: 'Wysiwyg Colorbox image'
+type: module
+# core: 8.x
+# version: 1.0
+package: Synapse
+
+# Information added by Drupal.org packaging script on 2018-01-10
+version: '8.x-1.1'
+core: '8.x'
+project: 'synimage'
+datestamp: 1515590591

@@ -1,0 +1,13 @@
+name: ckeditor_apester
+type: module
+description: This module create a Plugin on Ckeditor to show apester
+# core: 8.x
+package: apester
+dependencies:
+  - ckeditor
+
+# Information added by Drupal.org packaging script on 2016-10-14
+version: '8.x-1.0'
+core: '8.x'
+project: 'ckeditor_apester'
+datestamp: 1476451440

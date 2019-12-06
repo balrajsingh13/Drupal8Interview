@@ -1,0 +1,13 @@
+name: BigInt
+type: module
+description: Defines a numeric field type equivalent to a bigint db field (19) vs (10) of the default int field.
+package: Field types
+dependencies:
+  - field
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2018-12-29
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'bigint'
+datestamp: 1546062800

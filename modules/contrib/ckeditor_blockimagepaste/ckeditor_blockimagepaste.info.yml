@@ -1,0 +1,15 @@
+name: CKEditor block image paste
+type: module
+description: "Adds a plugin which blocks image pasting."
+package: CKEditor
+# core: 8.x
+
+dependencies:
+  - ckeditor
+  - editor
+
+# Information added by Drupal.org packaging script on 2019-04-09
+version: '8.x-1.2'
+core: '8.x'
+project: 'ckeditor_blockimagepaste'
+datestamp: 1554812417

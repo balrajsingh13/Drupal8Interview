@@ -1,0 +1,7 @@
+mymodule.articles_show:
+  path: '/articles/show'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\ContactController::getContacts'
+    _title: 'Contacts'
+  requirements:
+    _permission: 'access content'

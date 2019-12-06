@@ -1,0 +1,6 @@
+name: User Form
+type: module
+description: 'Form to take user data and store in DB.'
+package: Custom
+core: 8.x
+

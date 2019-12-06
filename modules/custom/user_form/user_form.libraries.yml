@@ -1,0 +1,10 @@
+user_formjs:
+  version: 1.x
+  js:
+      js/user_form.js: {}
+  
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal.ajax

@@ -1,0 +1,15 @@
+user_form.user_entry_route:
+  path: '/user-entry'
+  defaults:
+    _form: '\Drupal\user_form\Form\UserForm'
+    _title: 'User-Entry'
+  requirements:
+    _permission: 'access content'
+
+user_form.user_entry_show:
+  path: '/user-entry-show'
+  defaults:
+    _controller: '\Drupal\user_form\Controller\UserEntryController::getEntries'
+    _title: 'Contacts'
+  requirements:
+    _permission: 'access content'
