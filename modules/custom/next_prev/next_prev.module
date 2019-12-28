@@ -1,4 +1,8 @@
 <?php
+use Drupal\Core\Access\AccessResult;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Session\AccountInterface;
+
 function next_prev_get_nids() {
 	$sorted_nids = [];  //sorted nids according to date.
 	$query = \Drupal::database()->select('node_field_data', 'n');
@@ -11,4 +15,17 @@ function next_prev_get_nids() {
 		$sorted_nids[] = $row;
 	}
 	return $sorted_nids;
+}
+
+function next_prev_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  $id = $node->id();
+  if ($id == 7 && $op == 'update') {
+	if(in_array('clients', $account->getRoles())) {
+        return AccessResult::forbidden();
+    }
+    else {
+      return  AccessResult::allowed();
+    }
+  }
+  return AccessResult::neutral();
 }
